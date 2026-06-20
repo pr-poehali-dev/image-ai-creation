@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Plans public list",
+      "method": "GET",
+      "path": "/?resource=plans",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Providers public list",
+      "method": "GET",
+      "path": "/?resource=providers",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Gallery public",
+      "method": "GET",
+      "path": "/?resource=gallery",
+      "expectedStatus": 200
+    },
+    {
+      "name": "History requires auth",
+      "method": "GET",
+      "path": "/?resource=history",
+      "expectedStatus": 401
+    }
+  ]
+}
